@@ -1,0 +1,129 @@
+.container {  
+	max-width: 1200px; 
+	min-width: 650px;  
+	margin: 0 auto; 
+	padding: 50px;
+}
+
+.chart {
+  display: grid;  
+	border: 2px solid #000;  
+	position: relative;  
+	overflow-x: auto;
+}
+
+.chart_row {  
+	display: grid; 
+	grid-template-columns: 100px 1fr; 
+	background-color: #DCDCDC;
+}
+
+:root {
+  --timelineElements: 31;
+}
+
+.chart_period { 
+	color:  #fff;  
+	background-color:  #708090 !important;  
+	/* border-bottom: 2px solid #000;   */
+	grid-template-columns: 100px repeat(var(--timelineElements), minmax(30px, 1fr));
+}
+
+
+
+.chart_period > span {
+	text-align: center;  
+	font-size: 13px;  
+	align-self: center;  
+	font-weight: bold;  
+	padding: 15px 2px;   
+}
+
+.chart_lines { 
+	position: absolute;  
+	height: 100%;  
+	width: 100%;  
+	background-color: transparent;  
+	grid-template-columns: 100px repeat(var(--timelineElements), minmax(30px, 1fr));
+}
+
+.chart_lines > span {  
+	display: block;
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  grid-template-columns: 100px repeat(var(--timelineElements), minmax(30px, 1fr))
+  
+}
+
+.chart_row_item {
+  background-color:#708090;
+  border: 1px solid  #000;
+  border-top: 0;
+  border-left: 0;      
+  padding: 20px 0;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+} 
+
+.chart_row_bars {
+  list-style: none;
+  display: grid;
+  padding: 15px 0;
+  margin: 0;
+  grid-template-columns: repeat(var(--timelineElements), 1fr);
+  grid-gap: 10px 0;
+  border-bottom: 1px solid  #000;
+}
+li {
+  font-weight: 450;
+  text-align: left;
+  font-size: 15px;
+  min-height: 15px;
+  /* background-color: #708090; */
+  padding: 5px 7px;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+}
+ul .chart_li_one_a {
+  grid-column: 1/5; 
+  background-color:#dd2012;
+}
+ul .chart_li_one_b {
+  grid-column: 4/29; 
+  background-color:#dd2012;
+}
+ul .chart_li_two_a {
+  grid-column: 2/2; 
+  background-color: #f1ba20;
+}
+ul .chart_li_two_b {
+  grid-column: 2/4; 
+  background-color:#f1ba20;
+} 
+ul .chart_li_three {
+  grid-column: 3/5; 
+  background-color:#4fa380;
+}
+ul .chart_li_four_a {
+  grid-column: 3/6; 
+  background-color:#1c4927;
+}
+ul .chart_li_four_b {
+  grid-column: 7/10;
+  background-color: #1c4927;
+}
+ul .chart_li_five_a {
+  grid-column: 8/13; 
+  background-color:#440606;
+}
+ul .chart_li_five_b {
+  grid-column: 1/4; 
+  background-color:#440606;
+}
+ul .chart_li_five_c {
+  grid-column: 3/6; 
+  background-color:#440606;
+}
